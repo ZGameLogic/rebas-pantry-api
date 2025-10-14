@@ -1,20 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: test-ingress
+  name: rebas-pantry-api-dev-ingress
+  namespace: dev
 spec:
   rules:
-    - host: "test.zgamelogic.com"
+    - host: "pantry-dev.zgamelogic.com"
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: test
+                name: cobble-bot-dev
                 port:
                   number: 8080
   tls:
     - hosts:
-        - "test.zgamelogic.com"
+        - "pantry-dev.zgamelogic.com"
       secretName: ingress-tls
