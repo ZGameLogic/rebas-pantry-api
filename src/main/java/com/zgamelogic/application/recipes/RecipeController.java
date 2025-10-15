@@ -1,8 +1,6 @@
 package com.zgamelogic.application.recipes;
 
-import com.zgamelogic.application.recipes.database.Recipe;
 import com.zgamelogic.application.recipes.database.RecipeRepository;
-import com.zgamelogic.application.users.database.Chef;
 import com.zgamelogic.application.users.database.ChefRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
@@ -18,8 +16,6 @@ public class RecipeController {
 
     @PostConstruct
     public void init() {
-        Chef chef = chefRepository.findAll().get(0);
-        Recipe r = new Recipe(List.of(), List.of(), List.of(), chef, "Tomato soup");
-        recipeRepository.save(r);
+
     }
 }
