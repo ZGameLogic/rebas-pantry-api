@@ -9,13 +9,13 @@ import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
-public class Ingredient {
+public class Tag {
     @Id
     @GeneratedValue
     private UUID id;
     private String name;
 
-    public Ingredient(String name) {
+    public Tag(String name) {
         this.name = name;
     }
 }

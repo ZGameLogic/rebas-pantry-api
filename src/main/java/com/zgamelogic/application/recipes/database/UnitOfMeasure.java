@@ -2,20 +2,19 @@ package com.zgamelogic.application.recipes.database;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Entity
 @NoArgsConstructor
-public class Ingredient {
+public class UnitOfMeasure {
     @Id
-    @GeneratedValue
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
 
-    public Ingredient(String name) {
+    public UnitOfMeasure(String name) {
         this.name = name;
     }
 }
