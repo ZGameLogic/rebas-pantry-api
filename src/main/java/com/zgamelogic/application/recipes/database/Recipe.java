@@ -5,14 +5,13 @@ import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
 public class Recipe {
     @Id
     @GeneratedValue
-    private UUID id;
+    private Long id;
     @OneToMany(mappedBy = "recipe")
     private List<RecipeIngredient> ingredients;
     @ManyToMany

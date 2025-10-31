@@ -3,15 +3,13 @@ package com.zgamelogic.application.recipes.database;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Entity
 @NoArgsConstructor
 @Table(name = "recipe_ingredients")
 public class RecipeIngredient {
     @Id
     @GeneratedValue
-    private UUID id;
+    private Long id;
     @ManyToOne
     private Recipe recipe;
     @ManyToOne

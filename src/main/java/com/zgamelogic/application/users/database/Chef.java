@@ -5,13 +5,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
+
 
 @Entity
 public class Chef {
     @Id
     @GeneratedValue
-    private UUID uuid;
+    private Long id;
     private LocalDateTime joined;
 
     public Chef() {

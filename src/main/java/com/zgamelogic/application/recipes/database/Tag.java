@@ -5,14 +5,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Entity
 @NoArgsConstructor
 public class Tag {
     @Id
     @GeneratedValue
-    private UUID id;
+    private Long id;
     private String name;
 
     public Tag(String name) {

@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 import java.time.Duration;
-import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -12,7 +11,7 @@ import java.util.UUID;
 public class Step {
     @Id
     @GeneratedValue
-    private UUID id;
+    private Long id;
     private String description;
     private Duration duration;
     @ManyToOne

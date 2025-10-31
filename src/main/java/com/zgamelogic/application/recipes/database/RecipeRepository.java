@@ -3,9 +3,7 @@ package com.zgamelogic.application.recipes.database;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.UUID;
-
 @Repository
-public interface RecipeRepository extends JpaRepository<Recipe, UUID> {
+public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 
 }
