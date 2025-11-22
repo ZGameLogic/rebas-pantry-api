@@ -4,7 +4,7 @@ LABEL authors="Ben Shabowski"
 FROM arm64v8/openjdk:21-jdk-buster
 
 WORKDIR /app
-COPY /build/libs/Rebas-Pantry-Api-1.0.0.jar /app/rebas-pantry-api-1.0.0.jar
+COPY /build/libs/Rebas-Pantry-API-1.0.0.jar /app/rebas-pantry-api-1.0.0.jar
 
 EXPOSE 8080
 
