@@ -8,4 +8,4 @@ COPY /build/libs/Rebas-Pantry-API-1.0.0.jar /app/rebas-pantry-api-1.0.0.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "-Dspring.profiles.active=cluster", "rrebas-pantry-api-1.0.0.jar"]
+CMD ["java", "-jar", "-Dspring.profiles.active=cluster", "rebas-pantry-api-1.0.0.jar"]
