@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rebas-pantry-api-dev
-  namespace: dev
+  name: rebas-pantry-api
+  namespace: development
 spec:
   selector:
-    app: rebas-pantry-api-dev
+    app: rebas-pantry-api
   ports:
     - protocol: TCP
       port: 8080

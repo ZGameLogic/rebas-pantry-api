@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: rebas-pantry-api
-          image: ghcr.io/zgamelogic/rebas-pantry-api:master
+          image: ghcr.io/zgamelogic/rebas-pantry-api:production
           imagePullPolicy: Always
           env:
             - name: TZ

@@ -1,0 +1,26 @@
+name: Deploy Development
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - synchronize
+      - opened
+      - reopened
+    branches:
+      - main
+
+jobs:
+  deploy:
+    permissions:
+      contents: read
+      packages: write
+    uses: zgamelogic/github-actions/.github/workflows/kubernetes-deploy.yaml@0.0.1
+    with:
+      applicationId: 6
+      monitorIds: '6'
+      environment: development
+      deploymentName: rebas-pantry-api
+      imageName: rebas-pantry-api
