@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rebas-pantry-api-dev
-  namespace: dev
+  name: rebas-pantry-api
+  namespace: development
   labels:
-    app: rebas-pantry-api-dev
+    app: rebas-pantry-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: rebas-pantry-api-dev
+      app: rebas-pantry-api
   template:
     metadata:
-      name: rebas-pantry-api-dev
+      name: rebas-pantry-api
       labels:
-        app: rebas-pantry-api-dev
+        app: rebas-pantry-api
     spec:
       containers:
-        - name: rebas-pantry-api-dev
+        - name: rebas-pantry-api
           image: ghcr.io/zgamelogic/rebas-pantry-api:development
           imagePullPolicy: Always
           env:

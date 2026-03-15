@@ -1,10 +1,11 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: rebas-pantry-api-ingress
+  name: rebas-pantry-api
+  namespace: development
 spec:
   rules:
-    - host: "pantry.zgamelogic.com"
+    - host: "pantry-dev.zgamelogic.com"
       http:
         paths:
           - path: /
@@ -16,5 +17,5 @@ spec:
                   number: 8080
   tls:
     - hosts:
-        - "pantry.zgamelogic.com"
+        - "pantry-dev.zgamelogic.com"
       secretName: ingress-tls
